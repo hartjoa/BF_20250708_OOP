@@ -6,7 +6,7 @@ class Oiseau(Animal):
     Classe Oiseau qui hérite d'Animal
     """
     def __init__(self, nom, poids, taille, sexe, age, date_arrivee, couleur, en_voliere):
-        super().__init(nom, poids, taille, sexe, age, date_arrivee)
+        super().__init__(nom, poids, taille, sexe, age, date_arrivee)
         self.couleur = couleur
         self.en_voliere = en_voliere
 

@@ -6,7 +6,7 @@ class Chien(Animal):
     Classe Chien qui hérite d'Animal
     """
     def __init__(self, nom, poids, taille, sexe, age, date_arrivee, couleur_collier, est_dresse, race):
-        super().__init(nom, poids, taille, sexe, age, date_arrivee)
+        super().__init__(nom, poids, taille, sexe, age, date_arrivee)
         self.couleur_collier = couleur_collier
         self.est_dresse = est_dresse
         self.race = race
