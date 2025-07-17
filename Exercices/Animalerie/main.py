@@ -34,7 +34,6 @@ animalerie.ajouter_animal(oiseau)
 
 animal = animalerie.animaux[0]
 
-animal.vivant = False
-print("Vivant?", animal.vivant)
+print("Vivant?", animal._Animal__vivant)
 
 # endregion

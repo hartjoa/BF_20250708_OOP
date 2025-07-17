@@ -16,16 +16,16 @@ class Animal(ABC):
         self.age_humain = self.calcul_age_humain()
         self.__vivant = True
 
-    @property
-    def vivant(self):
-        return self.__vivant
+    # @property
+    # def vivant(self):
+    #     return self.__vivant
 
-    @vivant.setter
-    def vivant(self, value):
-        if not isinstance(value, bool):
-            raise TypeError("La propriété 'vivant' est un booléen (True/False)")
-            
-        self.__vivant = value
+    # @vivant.setter
+    # def vivant(self, value):
+    #     if not isinstance(value, bool):
+    #         raise TypeError("La propriété 'vivant' est un booléen (True/False)")
+
+    #     self.__vivant = value
     
     def calcul_age_humain(self):
         return 7 * self.age
