@@ -1,29 +1,25 @@
 from Models.animal import Animal
+import random
 
 class Chat(Animal):
-    __griffes_coupees = False
-    __poils_longs = False
-
-    @property
-    def age_humain(self):
-        return self.age * 7
+    """
+    Classe Chat qui hérite d'Animal
+    """
+    def __init__(self, nom, poids, taille, sexe, age, date_arrivee, caractere, griffes_coupees, poils_longs):
+        super().__init__(nom, poids, taille, sexe, age, date_arrivee)
+        self.griffes_coupees = griffes_coupees
+        self.caractere = caractere
+        self.poils_longs = poils_longs
 
     def crier(self):
-        super().crier()
-        print("Miaaaaouw!")
-    
-    @property
-    def griffes_coupees(self):
-        return self.__griffes_coupees
+        """
+        Méthode concrète: cri du chat
+        """
+        return("Miaou !!!")
 
-    @griffes_coupees.setter
-    def griffes_coupees(self, value):
-        self.__griffes_coupees = value
-    
-    @property
-    def poils_longs(self):
-        return self.__poils_longs
-
-    @poils_longs.setter
-    def poils_longs(self, value):
-        self.__poils_longs = value
+    def risque_deces(self):
+        """
+        Méthode concrète: risuqe de décès du chat
+        """
+        if random.random() < 0.005:   # 0.5% 
+            self.vivant = False
